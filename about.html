@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Story | Vacations with Caroline</title>
+<meta name="description" content="From skills tutor to Independent Travel Agent — Caroline's story of building a flexible travel business in the East Midlands.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">Vacations with Caroline</a>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html" class="active">My Story</a></li>
+      <li><a href="opportunity.html">The Opportunity</a></li>
+      <li><a href="success-stories.html">Success Stories</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="https://carolinekillen.inteletravel.uk">Book Travel</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="border-top:none;padding-bottom:0;">
+    <div class="wrap">
+      <p class="eyebrow">My Story</p>
+      <h1 style="max-width:16ch;">From the classroom to the check-in desk</h1>
+    </div>
+  </section>
+
+  <section style="border-top:none;">
+    <div class="wrap">
+      <div class="story-grid reveal">
+        <div>
+          <p>For years I've worked as a skills tutor, helping job seekers across Leicester and Nottingham build the confidence and know-how to move forward in their careers. It's work I care about — and it's taught me something I carry straight into this business: people do their best when someone believes in them and gives them a clear next step.</p>
+          <p>Travel has always been my reset button. Somewhere between planning my own trips and helping friends plan theirs, I realised I was already doing the job — I just wasn't getting paid for it. Becoming an Independent Travel Agent let me turn something I loved into something that could genuinely support my family.</p>
+          <p>My trip to Marrakesh was the moment it clicked. I saved £500 booking it myself, then earned commission back on top — including a sunset camel ride and a sunrise balloon flight. These days I'm not out there booking everyone else's holidays; I love growing a team of agents instead, and helping them build the same thing for themselves.</p>
+          <p>My kids are grown now — 23 and 21 — and for the first time in years, it's my turn to actually travel more. Doing that on one income isn't always easy, though, and that's really where this started. This business has given me extra income, new friendships, and a way to travel smarter so those bigger holidays actually feel affordable — all while building something alongside my career, not instead of it.</p>
+          <p>If you're weighing up whether this could work for you too, I'd genuinely rather have an honest chat than sell you anything. Have a look at <a href="opportunity.html" style="color:var(--teal-deep);border-bottom:1px solid var(--coral);">how it works</a>, or just <a href="contact.html" style="color:var(--teal-deep);border-bottom:1px solid var(--coral);">get in touch</a>.</p>
+        </div>
+        <div class="story-side">
+          <div class="photo-frame story-photo">
+            <img src="images/caroline-portrait.jpg" alt="Caroline">
+          </div>
+          <h3>A little about me</h3>
+          <ul>
+            <li>Based in the East Midlands, UK</li>
+            <li>Skills tutor by day, travel agent by chance</li>
+            <li>Known for a good laugh — usually found giggling about something</li>
+            <li>A nurturer at heart: I love helping and supporting people</li>
+            <li>Passionate about people, and I treasure my friendships</li>
+            <li>Mum to two, plus two very spoiled rescue dogs</li>
+            <li>Currently mid-way through a home renovation</li>
+          </ul>
+        </div>
+      </div>
+      <p class="pull reveal" style="margin-top:48px;">"Two weeks till payday and £4 in the bank. If that's ever been you, you already know exactly why I started this."</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-wrap">
+    <span>© Vacations with Caroline. Independent Travel Agent.</span>
+    <a href="mailto:vacationscaroline@gmail.com">vacationscaroline@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | Vacations with Caroline</title>
+<meta name="description" content="Get in touch with Caroline to plan your next holiday or ask about joining her team of Independent Travel Agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">Vacations with Caroline</a>
+    <ul class="navlinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">My Story</a></li>
+      <li><a href="opportunity.html">The Opportunity</a></li>
+      <li><a href="success-stories.html">Success Stories</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <a class="nav-cta" href="https://carolinekillen.inteletravel.uk">Book Travel</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero" style="border-top:none;padding-bottom:0;">
+    <div class="wrap">
+      <p class="eyebrow">Get In Touch</p>
+      <h1 style="max-width:16ch;">Let's plan your trip, or talk opportunity</h1>
+    </div>
+  </section>
+
+  <section style="border-top:none;">
+    <div class="wrap">
+      <div class="contact-wrap reveal">
+        <div class="contact-info">
+          <div class="row">
+            <h4>Email</h4>
+            <a href="mailto:vacationscaroline@gmail.com">vacationscaroline@gmail.com</a>
+          </div>
+          <div class="row">
+            <h4>WhatsApp</h4>
+            <p style="margin:6px 0 12px;color:#3a423d;">07932 874348</p>
+            <a class="btn-whatsapp" href="https://wa.me/447932874348" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2.003c-5.514 0-9.997 4.483-9.997 9.997 0 1.762.462 3.479 1.34 4.995L2 22l5.117-1.342a9.96 9.96 0 0 0 4.887 1.245h.004c5.514 0 9.997-4.483 9.997-9.997 0-2.67-1.04-5.182-2.928-7.07a9.935 9.935 0 0 0-7.073-2.933zm0 18.174a8.16 8.16 0 0 1-4.16-1.14l-.298-.177-3.037.797.811-2.96-.194-.304a8.163 8.163 0 0 1-1.256-4.393c0-4.508 3.669-8.177 8.177-8.177a8.12 8.12 0 0 1 5.784 2.398 8.12 8.12 0 0 1 2.393 5.783c0 4.508-3.669 8.173-8.22 8.173z"/></svg>
+              Chat on WhatsApp
+            </a>
+          </div>
+          <div class="row">
+            <h4>Based In</h4>
+            <p style="margin:6px 0 0;color:#3a423d;">East Midlands, UK (Leicester &amp; Nottingham)</p>
+          </div>
+          <div class="row">
+            <h4>Book Online</h4>
+            <a href="https://carolinekillen.inteletravel.uk">carolinekillen.inteletravel.uk</a>
+          </div>
+        </div>
+        <form onsubmit="event.preventDefault(); window.location.href='mailto:vacationscaroline@gmail.com?subject=Website%20Enquiry&body=' + encodeURIComponent('Name: ' + this.name.value + '\nMessage: ' + this.message.value);">
+          <div>
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required>
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Tell me a bit about your trip, or if you're curious about the business opportunity..." required></textarea>
+          </div>
+          <button type="submit">Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot-wrap">
+    <span>© Vacations with Caroline. Independent Travel Agent.</span>
+    <a href="mailto:vacationscaroline@gmail.com">vacationscaroline@gmail.com</a>
+  </div>
+</footer>
+
+<script>
+  const els = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:0.15});
+  els.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
