@@ -68,7 +68,10 @@
             <a href="https://carolinekillen.inteletravel.uk">carolinekillen.inteletravel.uk</a>
           </div>
         </div>
-        <form onsubmit="event.preventDefault(); window.location.href='mailto:vacationscaroline@gmail.com?subject=Website%20Enquiry&body=' + encodeURIComponent('Name: ' + this.name.value + '\nMessage: ' + this.message.value);">
+        <form action="https://formsubmit.co/vacationscaroline@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Website Enquiry">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://vacationscaroline.github.io/vacations-with-caroline/contact.html">
           <div>
             <label for="name">Name</label>
             <input id="name" name="name" type="text" required>
@@ -78,8 +81,16 @@
             <input id="email" name="email" type="email" required>
           </div>
           <div>
+            <label>I'm enquiring about:</label>
+            <div class="radio-group">
+              <label class="radio-option"><input type="radio" name="Enquiring about" value="Booking a holiday / Getting a quote" required> Booking a holiday / Getting a quote</label>
+              <label class="radio-option"><input type="radio" name="Enquiring about" value="The travel opportunity"> The travel opportunity</label>
+              <label class="radio-option"><input type="radio" name="Enquiring about" value="Something else"> Something else</label>
+            </div>
+          </div>
+          <div>
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Tell me a bit about your trip, or if you're curious about the business opportunity..." required></textarea>
+            <textarea id="message" name="Message" placeholder="Tell me a bit more..." required></textarea>
           </div>
           <button type="submit">Send Enquiry</button>
         </form>
