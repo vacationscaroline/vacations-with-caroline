@@ -204,6 +204,12 @@ textarea{resize:vertical;min-height:100px;}
 input:focus, textarea:focus, a:focus-visible, button:focus-visible{outline:2px solid var(--coral);outline-offset:2px;}
 form button{align-self:flex-start;background:var(--coral);color:#fff;border:none;padding:13px 28px;font-size:0.95rem;border-radius:2px;cursor:pointer;transition:background .2s ease;}
 form button:hover{background:#c25f3c;}
+.radio-group{display:flex;flex-direction:column;gap:10px;margin-top:2px;}
+.radio-option{
+  display:flex;align-items:center;gap:10px;font-size:0.95rem;color:var(--ink);
+  font-weight:400;cursor:pointer;
+}
+.radio-option input{width:16px;height:16px;accent-color:var(--coral);cursor:pointer;}
 @media (max-width:760px){.contact-wrap{grid-template-columns:1fr;}}
 
 /* ---------- PHOTOS ---------- */
@@ -338,7 +344,71 @@ form button:hover{background:#c25f3c;}
 .photo-band h2{color:var(--sand);}
 .photo-band p:not(.kicker){color:rgba(242,234,217,0.9);}
 
-footer{border-top:1px solid var(--line);padding:36px 0;}
+/* Opportunity page extras */
+.glance-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:2px;background:var(--line);border:1px solid var(--line);
+}
+.glance-item{background:var(--sand);padding:28px 22px;}
+.glance-item .ic{font-size:1.6rem;display:block;margin-bottom:12px;}
+.glance-item h4{font-family:var(--font-display);color:var(--teal-deep);margin:0 0 8px;font-size:1.05rem;}
+.glance-item p{margin:0;font-size:0.9rem;color:#3a423d;}
+
+.benefit-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;
+}
+.benefit-item{background:var(--sand-soft);padding:30px 26px;border-radius:2px;}
+.benefit-item h3{font-family:var(--font-display);font-style:italic;color:var(--coral);margin:0 0 12px;font-size:1.2rem;font-weight:500;}
+.benefit-item p{margin:0;font-size:0.92rem;color:#3a423d;line-height:1.6;}
+
+.faq-list{display:flex;flex-direction:column;gap:2px;background:var(--line);border:1px solid var(--line);}
+.faq-item{background:var(--sand);padding:20px 24px;}
+.faq-item summary{
+  font-family:var(--font-display);color:var(--teal-deep);font-weight:600;
+  cursor:pointer;list-style:none;font-size:1.02rem;
+}
+.faq-item summary::-webkit-details-marker{display:none;}
+.faq-item summary::after{content:"+";float:right;color:var(--coral);font-size:1.2rem;}
+.faq-item[open] summary::after{content:"–";}
+.faq-item p{margin:12px 0 0;color:#3a423d;font-size:0.92rem;line-height:1.6;}
+
+.cta-band{
+  position:relative;border-radius:0;overflow:hidden;text-align:center;
+  padding:64px 24px;background:var(--teal-deep);color:var(--sand);
+}
+.cta-band h2{color:var(--sand);}
+.cta-band p{color:rgba(242,234,217,0.85);max-width:52ch;margin:0 auto 28px;}
+.cta-band .cta-row{justify-content:center;margin-bottom:0;}
+
+.pricing-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px;
+}
+.pricing-card{background:var(--sand-soft);padding:32px 28px;border-radius:2px;}
+.pricing-card h3{font-family:var(--font-display);color:var(--teal-deep);margin:0 0 16px;font-size:1.2rem;}
+.pricing-card .price-line{margin:0 0 10px;font-size:0.98rem;color:#3a423d;}
+.pricing-card .price-line strong{color:var(--coral);font-size:1.15rem;}
+
+footer{border-top:1px solid var(--line);padding:48px 0 28px;}
+.footer-grid{
+  display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:28px;
+}
+.footer-brand{
+  font-family:var(--font-display);font-weight:600;font-size:1.15rem;
+  color:var(--teal-deep);margin:0 0 10px;
+}
+.footer-tagline{font-size:0.9rem;color:#5a6259;line-height:1.6;margin:0;max-width:32ch;}
+.footer-heading{
+  text-transform:uppercase;letter-spacing:0.1em;font-size:0.75rem;
+  color:var(--coral);font-weight:600;margin:0 0 14px;
+}
+.footer-links{list-style:none;margin:0;padding:0;}
+.footer-links li{margin-bottom:10px;}
+.footer-links a{
+  color:#3a423d;text-decoration:none;font-size:0.92rem;
+  border-bottom:1px solid transparent;
+}
+.footer-links a:hover{color:var(--teal-deep);border-color:var(--coral);}
+@media (max-width:700px){.footer-grid{grid-template-columns:1fr;gap:28px;}}
 .foot-wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:0.85rem;color:#5a6259;}
 .foot-wrap a{text-decoration:none;color:#5a6259;border-bottom:1px solid transparent;}
 .foot-wrap a:hover{border-color:var(--coral);color:var(--teal-deep);}
